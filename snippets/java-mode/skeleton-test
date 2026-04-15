@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: skeleton-test
+# key: skeltest
+# --
+
+package my.package.name;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class ${1:MockTest} {
+
+    @Test
+    public void testDefaultConstructor() {
+        Mock mock = new Mock("1");
+        assertEquals("1", 1, "Test 1 equals 1");
+    }
+
+}

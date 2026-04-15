@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: junit-test
+# key: ut
+# --
+
+        @Test
+        public void testDefaultConstructor() {
+            double a = 1;
+            assertEquals(a, 1, "Test 1 equals 1");
+        }

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: begindoc
+# key: begindoc
+# --
+
+#+title: Title of the Document
+#+author: Author Name
+#+date: YYYY-MM-DD
+#+description: Description of the document
+#+keywords: org-mode, yaml, header
+#+options: H:2 num:nil toc:nil \˗\
+           todo:nil \| tasks:nil pri:nil tags:toc
+#+startup: overview
+
+* Main section

@@ -1,0 +1,50 @@
+
+# -*- mode: snippet -*-
+# name: java2cpptranslation
+# key: java2cpptranslation
+# --
+
+I'd like you to help me translate the below java code into its c++ equivalent code using the following constraints:
+
+- use the context given above as either it is similar to what I want because that
+  because that is an example of a similar class that was written from
+  java to c++ or provides context of available methods/classes for the code being translated
+
+- write enums as enum classes and write a helper class w static to_string and from_string methods
+
+- If the code is a derived class, add a create() static methods for each
+  nonstandard constructor that returns a std::shared_ptr of self type:
+
+- also if a derived class use shared_ptr return types in methods and shared_ptr as arguments to methods.
+
+- also if derived, write a Facade wrapper class around that shared_ptr type
+
+- when dealing with any derived classes, assume all unkown types are also shared_ptr
+
+- Wrap in the charm namespace:
+
+- separate into header and include files:
+
+- forward declare any unknown types at the top of the header
+
+- Prefer only declarations in header file and source code in implementation source file
+
+- wrap any code chunks analgous to the context given above with:
+
+// {{{ title for start of code chunk (i.e. similar appropriate title as context here)
+
+... code here
+
+// }}} title for end of code chunk
+
+- Assume xml functionality has a roughly similar api to W3C dom but is being wrapped into a cpp class using libxml c library as backend. Use the w3c api unless needing to use libxml (should be rare).
+
+- pass xml related objects by const reference
+
+- Keep all comments (reformat if needed)
+
+- Have classes be in UpperCamelCase and methods in lower_snake_case 
+
+- prefix internal fields with m_ and assume inherited fields are prefixed with m_
+
+- assume constructors with 1 argument need explicit type conversions

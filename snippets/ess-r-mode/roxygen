@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: roxygen
+# key: roxy
+# --
+
+
+#' ${1:Title}
+#'
+#' ${2:Description}
+#' @param  $3
+#' @keywords $4
+#' @author Jordan Schupbach
+#' @export
+#' @examples
+#' ${5:print("Hello World")}

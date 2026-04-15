@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: method-s4
+# key: ms4
+# --
+
+setGeneric("${1:my_generic}", function(x) {
+  standardGeneric("my_generic")
+})
+
+setMethod("${2:my_generic}",
+  c(x = "${3:my_class}", y = "my_class"),
+  function(x, y) {
+    print(x)
+    print(y)
+  }
+)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: map
+# key: map
+# --
+
+    private Map<String, String> myMap;

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: newenvironment
+# key: newenvironment
+# --
+
+% TODO: Fix this snippet to be more informative
+\newenvironment{example}[1]
+{
+  \vspace{1em}
+  \noindent \emph{Example: #1} \\
+  $1
+    }
+    {
+}

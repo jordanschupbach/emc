@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: comment
+# key: com
+# --
+
+    /**
+     * ${1:Description}
+     * @param ${2:first arg}
+     */

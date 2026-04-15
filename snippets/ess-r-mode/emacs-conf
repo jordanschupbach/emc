@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: emacs-conf
+# key: emc
+# expand-env: ((yas-indent-line 'fixed))
+# --
+
+# -*- origami-fold-style: triple-braces -*-
+
+$1
+
+
+# Local Variables:
+# eval: (origami-mode t)
+# End:

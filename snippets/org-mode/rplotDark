@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: R plot darkmode
+# key: rplotDark
+# --
+
+#+BEGIN_SRC R :file test.png :results graphics
+  library(ggplot2)
+
+  # Create a sample data frame
+  df <- data.frame(x = 1:10, y = 1:10)
+
+  # Create the plot
+  plot <- ggplot(df, aes(x = x, y = y)) +
+      theme(text = element_text(color = rgb(0.9, 0.8, 0.8, 1)),
+            plot.background = element_rect(fill =  rgb(0.1, 0.2, 0.2, 1)),
+            panel.background = element_rect(fill = rgb(0.1, 0.2, 0.2, 1), color = 'purple'),
+            panel.grid = element_line(color = rgb(0.9, 0.3, 0.7, 1)),
+            axis.text = element_text(color = rgb(0.9, 0.3, 0.7, 1)),
+            axis.ticks = element_line(color = "blue")) +
+    geom_point(color = rgb(0.0, 0.9, 1, 1), size = 3) +
+    geom_line(color =  rgb(0.0, 0.9, 1, 1))
+  print(plot)
+#+END_SRC

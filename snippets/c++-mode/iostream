@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: iostream
+# key: iostream
+# --
+
+#include<iostream>

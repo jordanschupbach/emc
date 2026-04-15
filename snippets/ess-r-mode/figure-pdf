@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: figure-pdf
+# key: figp
+# --
+
+
+pdf("fig.pdf", family="CM Roman", width=7, height=7)
+plot(${1:c(1,1)},
+     xlim = ${2:c(-1, 1)},
+     ylim = ${3:c(-1, 1)},
+     xlab = "${4:X}",
+     ylab = "${5:Y}",
+     main = "${6:Main Title}",
+     pch = 20,
+     col = rgb(.2, .2, .2, .2))
+dev.off()
+embed_fonts("fig.pdf", outfile="fig.pdf")

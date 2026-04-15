@@ -1,0 +1,37 @@
+# -*- mode: snippet -*-
+# name: doc-class-long
+# key: dcl
+# --
+
+/**
+* ${1: Brief summary of this class, ending with a period.}
+*
+* ${2: It is common to leave a blank line between the summary and further details.
+* The summary (everything before the first period) is used in the class or package
+* overview section.}
+*
+* ${3: The following inline tags can be used (not an exhaustive list):}
+* {@link some.other.class.Documentation} for linking to other docs or symbols
+* {@link some.other.class.Documentation Some Display Name} the link's appearance can be
+* customized by adding a display name after the doc or symbol locator
+* {@code code goes here} for formatting as code
+* {@literal <>[]()foo} for interpreting literal text without converting to HTML markup
+* or other tags.
+* Optionally, the following tags may be used at the end of class documentation
+* (not an exhaustive list):}
+* @author ${4: Jordan Schupbach}
+* @version ${5: 1.0}
+* @since ${6: 8/10/22}
+* @see ${7: some.other.class.Documentation}
+* @deprecated ${8: This class has been replaced by some.other.package.BetterFileReader}
+*
+* You can also have custom tags for displaying additional information.
+* Using the @custom. tag and the -tag custom.:htmltag:"context"
+* command line option, you can create a custom tag.
+*
+* Example custom tag and generation:
+* @custom.updated 2.0
+* Javadoc flag: -tag custom.updated:a:"Updated in version:"
+* The above flag will display the value of @custom.updated under "Updated in version:"
+*
+*/

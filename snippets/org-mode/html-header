@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: html-header
+# key: html-header
+# --
+
+#+OPTIONS: toc:nil
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="style.css">

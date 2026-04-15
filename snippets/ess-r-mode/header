@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: header
+# key: hd
+# expand-env: ((yas-indent-line 'fixed))
+# --
+
+# {{{ Header
+# Name: ${1:filename.txt}
+# Author: Jordan Schupbach
+# Description: ${2:A short description of the file}
+# }}} Header

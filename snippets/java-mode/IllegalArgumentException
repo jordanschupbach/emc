@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: IllegalArgumentException
+# key: IAE
+# --
+
+throw new IllegalArgumentException("$1");

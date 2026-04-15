@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: class
+# key: class
+# --
+
+public class ${1:MyClass} {
+
+    public ${2:MyClass}(){
+        System.out.println("Hello World");
+    }
+
+}

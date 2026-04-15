@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: tikz-drawing 
+# key: tikz
+# --
+
+#+header: :file test.png :fit yes
+#+header: :imagemagick yes :iminoptions -density 600 :imoutoptions -geometry 400
+#+header: :results (if (and (boundp 'backend) (eq backend 'latex)) "latex" "file")
+#+begin_src latex :exports results :noweb yes :headers '("\\usepackage{tikz}")
+  \begin{tikzpicture}
+    \node[red!50!black] (a) {A};
+    \node (b) [right of=a] {B};
+    \draw[->] (a) -- (b);
+  \end{tikzpicture}
+#+end_src

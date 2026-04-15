@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: scatterplot-gnuplot
+# key: scatterplotgnuplot
+# --
+
+#+begin_src gnuplot :file iris_plot.png
+  set datafile separator ','
+  set term png
+  unset colorbox
+  set output 'iris_plot.png'
+  set palette defined (0 '#440154', 0.1111 '#3a528b', 0.2222 '#20908d', 0.3333 '#5dc962', 0.4444 '#fde725')
+  set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb "#444444" behind
+  set style line 1 lc rgb "#CCCCCC" lw 1
+  set style text color rgb "#CCCCCC"
+  set border lc rgb "#CCCCCC"
+  set xtics textcolor rgb "#CCCCCC"
+  set ytics textcolor rgb "#CCCCCC"
+  set xlabel "Sepal Length" textcolor rgb "#CCCCCC"
+  set ylabel "Sepal Width" textcolor rgb "#CCCCCC"
+  set title "Sepal Length vs Sepal Width" textcolor rgb "#CCCCCC"
+  plot 'iris.data' using 1:3:(column(5)) with points palette notitle
+#+end_src

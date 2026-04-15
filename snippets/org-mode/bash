@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: src-bash
+# key: sb
+# --
+
+#+BEGIN_SRC bash
+echo "Hello, World!"
+#+END_SRC

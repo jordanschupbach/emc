@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: overprint
+# key: overprint
+# --
+
+\begin{overprint}
+
+\onslide<1>
+$1
+
+\onslide<2>
+$2
+
+\end{overprint}

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: python src block
+# key: srcPython
+# --
+
+#+begin_src python :results output
+print("Hello worldz")
+#+end_src

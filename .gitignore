@@ -1,0 +1,15 @@
+auto-save-list
+eln-cache
+elpaca
+elpa
+recentf
+init.el
+.direnv
+.org-id-locations
+bookmarks
+org-roam.db
+projectile-bookmarks.eld
+projects
+tangle-script.el
+tramp
+transient

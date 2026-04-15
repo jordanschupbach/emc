@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: class-s4
+# key: cls4
+# --
+
+setClass("${1:person}",
+  slots = list(${2:name} = "${3:character}", ${4:age} = "${5:age}"))

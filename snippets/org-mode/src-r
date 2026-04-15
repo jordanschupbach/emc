@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: src-r
+# key: src-r
+# --
+
+#+BEGIN_SRC r
+print("Hello, World!")
+#+END_SRC

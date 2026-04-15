@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: figure-scatter
+# key: figs
+# --
+
+svg("fig.svg")
+plot(${1:c(1,1)},
+     xlim = ${2:c(-1, 1)},
+     ylim = ${3:c(-1, 1)},
+     xlab = "${4:X}",
+     ylab = "${5:Y}",
+     main = "${6:Figure Title}",
+     pch = 20,
+     col = rgb(.2, .2, .2, .2))
+dev.off()
+system("inkscape fig.svg --export-area-drawing --batch-process --export-type=pdf --export-filename=fig.pdf", intern = TRUE)

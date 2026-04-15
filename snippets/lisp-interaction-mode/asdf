@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: asdf
+# key: asdf
+# --
+
+
+(defun asdf ()
+  "asdf asdf"
+  (interactive)
+  (message "asdf, asdf!"))

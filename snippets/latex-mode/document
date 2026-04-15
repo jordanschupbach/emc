@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: document
+# key: doc
+# --
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+$1
+\end{document}

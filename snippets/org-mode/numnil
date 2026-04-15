@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: numnil
+# key: numnil
+# --
+#+OPTIONS: num:nil

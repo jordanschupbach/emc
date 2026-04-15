@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Hello world
+# key: hello-world
+# --
+
+(defun hello-world ()
+  "Prints 'Hello, World!' to the message buffer."
+  (interactive)
+  (message "Hello, World!"))

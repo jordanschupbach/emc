@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: example-box
+# key: example-box
+# --
+
+#+REVEAL_HTML: <br>
+#+REVEAL_HTML: <br>
+#+ATTR_REVEAL: :class centered
+#+REVEAL_HTML: <div class="column" style="float:center;width:100%;align-items:center;">
+#+REVEAL_HTML: <div class="example-box">
+#+REVEAL_HTML: <div class="example-title">
+Example:
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="example-content">
+    Of a sizeable random sample of voters surveyed, 66% support Measure Z.
+    Therefore, approximately 66% of voters support Measure Z.
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>

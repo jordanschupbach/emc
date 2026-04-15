@@ -1,0 +1,6 @@
+# key: main-comment
+# name: main-comment
+# --
+    /** This main function is just a playground. Feel free to change. If
+      * you use this, you should probably be also writing a unit test
+      */

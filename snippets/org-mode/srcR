@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: R source block
+# key: srcR
+# --
+
+#+BEGIN_SRC R :results output :cache yes
+print("hello world")
+#+END_SRC

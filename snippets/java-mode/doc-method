@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: doc-method
+# key: dm
+# --
+
+/**
+ * <strong>${1:MyMethod}</strong>
+ * ${2:Simple description for my method}
+ *
+ * @param ${3:argnam - arg description}
+ * @return ${4:return type}
+ * @author Jordan Schupbach
+ * @since ${5:2022-05-01}
+ */

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: new-s4
+# key: ns4
+# --
+
+${1:alice} <- new("${2:Person}", ${3:name} = "${4:Alice}", ${5:age} = ${6:40})
