@@ -24,7 +24,7 @@
         export PATH="${pkgs.R}/bin:$PATH"
         cd "$CACHE_DIR"
         ${pkgs.emacs-unstable}/bin/emacs --batch -l ./tangle-script.el 
-        exec ${pkgs.emacs-unstable}/bin/emacs --init-dir "$CACHE_DIR" "$@"
+        exec ${pkgs.emacs-unstable}/bin/emacs --init-dir "$CACHE_DIR" --directory $HOME "$@"
       '';
     in
     {
