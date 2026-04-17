@@ -10,6 +10,5 @@ bookmarks
 org-roam.db
 projectile-bookmarks.eld
 projects
-tangle-script.el
 tramp
 transient

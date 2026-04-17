@@ -1,5 +1,5 @@
 {
-  description = "MiseEnPlace Emacs";
+  description = "Emacs with nix-community overlay";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     overlay.url = "github:nix-community/emacs-overlay";
@@ -13,7 +13,7 @@
       };
       emacsWrapper = pkgs.writeShellScriptBin "emacs-wrapper" ''
         #!/bin/sh
-        CACHE_DIR="$HOME/.emacs.mise-en-place"
+        CACHE_DIR="$HOME/.local/share/emc/"
         mkdir -p "$CACHE_DIR"
         cp -r ${toString ./.}/* "$CACHE_DIR/" 2>/dev/null || true
         chmod -R u+w "$CACHE_DIR"/*
@@ -22,6 +22,8 @@
         export PATH="${pkgs.gcc}/bin:$PATH"
         export PATH="${pkgs.libtool}/bin:$PATH"
         export PATH="${pkgs.R}/bin:$PATH"
+        cd "$CACHE_DIR"
+        ${pkgs.emacs-unstable}/bin/emacs --batch -l ./tangle-script.el 
         exec ${pkgs.emacs-unstable}/bin/emacs --init-dir "$CACHE_DIR" "$@"
       '';
     in
@@ -43,7 +45,8 @@
 	  pkgs.libtool
 	  pkgs.R
 	  pkgs.copilot-language-server
-	];
+	  ];
+
       };
     };
 }
