@@ -15,7 +15,7 @@
         #!/bin/sh
         CACHE_DIR="$HOME/.local/share/emc/"
         mkdir -p "$CACHE_DIR"
-        cp -r ${toString ./.}/* "$CACHE_DIR/" 2>/dev/null || true
+        cp -ra ${toString ./.}/* "$CACHE_DIR/" 2>/dev/null || true
         chmod -R u+w "$CACHE_DIR"/*
         export PATH="${pkgs.cmake}/bin:$PATH"
         export PATH="${pkgs.gnumake}/bin:$PATH"
