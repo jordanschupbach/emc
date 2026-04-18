@@ -2222,6 +2222,7 @@ Doomemacs has some nice [[https://github.com/doomemacs/themes][themes]]. I use `
     (setq tab-bar-close-button-show nil
 	tab-bar-new-button-show nil))
 
+(set-face-attribute 'tab-bar nil :height 120)
 ;; (setq tab-bar-close-button-show t
 ;;       tab-bar-new-button-show t)
 ;; (setq tab-bar-tab-name-format-function
