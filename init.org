@@ -2223,7 +2223,7 @@ Doomemacs has some nice [[https://github.com/doomemacs/themes][themes]]. I use `
 	tab-bar-new-button-show nil))
 
 
-(custom-set-faces '(tab-bar ((t (:height 1.2)))))
+(custom-set-faces '(tab-bar ((t (:height 0.8)))))
 (set-face-attribute 'tab-bar nil :height 120)
 
 ;; (setq tab-bar-close-button-show t
