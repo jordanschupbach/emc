@@ -1,3 +1,25 @@
 * Mise En Place
 
-This is my personal emacs configuration. Check out init.org for more details.
+This is my personal emacs configuration. The configuration uses
+literate programming, so the main configuration file is init.org. The
+org file is tangled to generate the init.el file that emacs loads on
+startup. If you clone the repo, you can run the command in the justfile
+to generate the init.el file:
+
+#+begin_src sh
+emacs --batch -l ./tangle-script.el
+#+end_src
+
+The config is also maintained as a nix flake, so you can use the nix
+flake directly via:
+
+#+begin_src sh
+nix run --refresh "github:jordanschupbach/emc"
+#+end_src
+
+I just alias this command with the -nw flag in my shell configuration
+as `e`, so I can run `e` to start emacs with this configuration in the shell.
+
+I also use this command in a .desktop file to start emacs in the
+graphical environment, so I can run emacs from the application
+launcher as well.
