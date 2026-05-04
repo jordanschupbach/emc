@@ -45,6 +45,7 @@
 	  pkgs.libtool
 	  pkgs.R
 	  pkgs.copilot-language-server
+	  pkgs.emacs
 	  ];
 
       };

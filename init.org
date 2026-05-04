@@ -331,6 +331,11 @@ use it in neotree and marginalia.j
   :init
   (all-the-icons-completion-mode))
 
+
+;; https://github.com/emacs-compat/compat
+(use-package compat
+    :ensure (:host github :repo "emacs-compat/compat" :wait t))
+
 #+END_SRC
 
 
