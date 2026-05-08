@@ -2135,7 +2135,7 @@ The biggest reason many choose to use emacs is [[https://orgmode.org/][org-mode]
 
 (setq org-roam-capture-templates
 '(
-("w" "wiki" plain (file "~/org-roam/wiki/templates/stuff.org")
+("w" "wiki" plain (file "~/org-roam/wiki/templates/main.org")
 :target (file+head "wiki/%<%Y%m%d%H%M%S>-${slug}.org"
 "#+title: ${title}\n") :unnarrowed t)
 ;; ("b" "research" plain (file "~/org-roam/study/templates/research.org")
