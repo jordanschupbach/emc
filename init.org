@@ -2305,17 +2305,17 @@ Doomemacs has some nice [[https://github.com/doomemacs/themes][themes]]. I use `
 ;;   :config
 ;;   (fzf-native-load-dyn))
 
-(use-package fussy
-  :ensure (:host github :repo "jojojames/fussy")
-  :config
-  (fussy-setup-fzf)
-  (fussy-eglot-setup)
-  (fussy-company-setup))
-
-(use-package fzf-async
-  :ensure (:host github :repo "jojojames/fzf-async")
-  :config
-  (fzf-async-setup))
+;;  (use-package fussy
+;;    :ensure (:host github :repo "jojojames/fussy")
+;;    :config
+;;    (fussy-setup-fzf)
+;;    (fussy-eglot-setup)
+;;    (fussy-company-setup))
+;;  
+;;  (use-package fzf-async
+;;    :ensure (:host github :repo "jojojames/fzf-async")
+;;    :config
+;;    (fzf-async-setup))
 
 #+END_SRC
 
