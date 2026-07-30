@@ -208,11 +208,38 @@ See `x-set-selection'."
 	     (t (setq xclip-last-selected-text-primary primary-text))))
       (or clip-text primary-text))))
 
+;; macOS: xclip and the X PRIMARY/CLIPBOARD selections don't exist, so bridge
+;; kill/yank to the system clipboard with pbcopy/pbpaste instead.
+(defvar pbclip-last-copied nil
+  "Last text copied by this Emacs, so we don't yank our own value back.")
+
+(defun pbclip-select-text (text &optional _push)
+  "Send TEXT to the macOS clipboard.  See `interprogram-cut-function'."
+  (let ((process-connection-type nil))
+    (let ((proc (start-process "pbcopy" nil "pbcopy")))
+      (process-send-string proc text)
+      (process-send-eof proc)))
+  (setq pbclip-last-copied text))
+
+(defun pbclip-selection-value ()
+  "Return the macOS clipboard contents.  See `interprogram-paste-function'."
+  (let ((text (shell-command-to-string "pbpaste")))
+    ;; Return nil when empty or unchanged from our own last copy, so the
+    ;; existing kill-ring entry is used instead of a duplicate.
+    (cond
+     ((string= text "") nil)
+     ((string= text pbclip-last-copied) nil)
+     (t text))))
+
 ;;;###autoload
 (defun turn-on-xclip ()
   (interactive)
-  (setq interprogram-cut-function 'xclip-select-text)
-  (setq interprogram-paste-function 'xclip-selection-value))
+  (if (and (eq system-type 'darwin) (executable-find "pbcopy"))
+      (progn
+	(setq interprogram-cut-function 'pbclip-select-text)
+	(setq interprogram-paste-function 'pbclip-selection-value))
+    (setq interprogram-cut-function 'xclip-select-text)
+    (setq interprogram-paste-function 'xclip-selection-value)))
 
 ;;;###autoload
 (defun turn-off-xclip ()
