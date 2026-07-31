@@ -2421,7 +2421,11 @@ The biggest reason many choose to use emacs is [[https://orgmode.org/][org-mode]
   :ensure (:host github :repo "org-roam/org-roam")
   :after 'org
   :custom
-    (setq org-roam-directory (file-truename "~/org-roam/wiki"))
+    ;; NOTE: :custom takes (variable value) forms, NOT a `setq'. Wrapping this in
+    ;; `setq' silently customized a bogus symbol, leaving org-roam-directory at
+    ;; its default (~/org-roam) which pulled in the read-only Nix-store copies
+    ;; under .direnv/ and opened notes write-protected.
+    (org-roam-directory (file-truename "~/org-roam/wiki"))
   :config
     (org-roam-db-autosync-mode)
   )
