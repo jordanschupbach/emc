@@ -2421,7 +2421,7 @@ The biggest reason many choose to use emacs is [[https://orgmode.org/][org-mode]
   :ensure (:host github :repo "org-roam/org-roam")
   :after 'org
   :custom
-    (setq org-roam-directory (file-truename "~/org-roam"))
+    (setq org-roam-directory (file-truename "~/org-roam/wiki"))
   :config
     (org-roam-db-autosync-mode)
   )
@@ -2429,7 +2429,7 @@ The biggest reason many choose to use emacs is [[https://orgmode.org/][org-mode]
 (setq org-roam-capture-templates
 '(
 ("w" "wiki" plain (file "~/org-roam/wiki/templates/main.org")
-:target (file+head "wiki/%<%Y%m%d%H%M%S>-${slug}.org"
+:target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
 "#+title: ${title}\n") :unnarrowed t)
 ;; ("b" "research" plain (file "~/org-roam/study/templates/research.org")
 ;; :target (file+head "study/%<%Y%m%d%H%M%S>-${slug}.org"
