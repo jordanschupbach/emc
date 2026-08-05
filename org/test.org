@@ -118,6 +118,15 @@ console.log("Hello, World!");
 #+RESULTS:
 : Hello, World!
 
+** Lean 4
+
+#+begin_src lean4 :results output
+#eval "Hello, World!"
+#+end_src
+
+#+RESULTS:
+: "Hello, World!"
+
 ** Lua
 
 #+begin_src lua :results output

@@ -2198,6 +2198,22 @@ int result = 2 + 3;
 #+end_src
 #+end_src
 
+*** Lean 4 (org-babel)
+
+This repo also includes a small `ob-lean4.el` implementation to make `#+begin_src lean4` blocks work.
+
+- `:results output` (default): return stdout from `lean` (or `lean --run` when the block defines `def main`)
+- `:results value`: not specially supported (Lean has no `$result`/`result` convention); treated the same as `output`
+- Sessions are not supported
+
+Example:
+
+#+begin_src org :tangle no
+#+begin_src lean4 :results output
+#eval "Hello, World!"
+#+end_src
+#+end_src
+
 *** ob-crystal
 
 #+BEGIN_SRC emacs-lisp :tangle init.el
@@ -2298,6 +2314,8 @@ The biggest reason many choose to use emacs is [[https://orgmode.org/][org-mode]
     (setq org-babel-d-command "ldc2")
     (require 'ob-php)
     (setq org-babel-php-command "php")
+    (require 'ob-lean4)
+    (setq org-babel-lean4-command "lean")
     (with-eval-after-load 'ob-ocaml
       (require 'ob-eval)
 

@@ -110,6 +110,7 @@
               pkgs.rust-script
               pkgs.lua
               pkgs.php
+              pkgs.lean4
             ] ++ pkgs.lib.optionals (pkgs ? dotnet-sdk_10) [ pkgs.dotnet-sdk_10 ]
               ++ pkgs.lib.optionals (pkgs ? mono) [ pkgs.mono ]
               ++ pkgs.lib.optionals (pkgs ? dotnet-repl) [ pkgs.dotnet-repl ];
